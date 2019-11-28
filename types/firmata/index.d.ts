@@ -129,6 +129,8 @@ declare class Board extends NodeJS.EventEmitter {
 	sysexResponse(commandByte: number, handler: (data: number[]) => void): void;
 	// TODO untested --- TWW
 	sysexCommand(message: number[]): void;
+	// TODO untested --- TWW
+	clearSysexResponse(commandByte: number): void;
 	reset(): void;
 	static isAcceptablePort(port: Board.Port): boolean;
 	static requestPort(callback: (error: any, port: Board.Port) => any): void;
